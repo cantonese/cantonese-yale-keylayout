@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<keyboard group="126" id="-852" name="Yale" maxout="1">
+<keyboard group="126" id="-852" name="Yale" maxout="2">
     <layouts>
         <layout first="0" last="17" mapSet="16c" modifiers="f4"/>
         <layout first="18" last="18" mapSet="994" modifiers="f4"/>
@@ -47,7 +47,7 @@
             <key code="2" output="d"/>
             <key code="3" output="f"/>
             <key code="4" output="h"/>
-            <key code="5" output="g"/>
+            <key code="5" action="LowerGEntry"/>
             <key code="6" output="z"/>
             <key code="7" output="x"/>
             <key code="8" output="c"/>
@@ -88,7 +88,7 @@
             <key code="43" output=","/>
             <key code="44" output="/"/>
             <key code="45" action="16"/>
-            <key code="46" output="m"/>
+            <key code="46" action="LowerMEntry"/>
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
@@ -159,7 +159,7 @@
             <key code="2" output="D"/>
             <key code="3" output="F"/>
             <key code="4" output="H"/>
-            <key code="5" output="G"/>
+            <key code="5" action="UpperGEntry"/>
             <key code="6" output="Z"/>
             <key code="7" output="X"/>
             <key code="8" output="C"/>
@@ -200,7 +200,7 @@
             <key code="43" output="&#x003C;"/>
             <key code="44" output="?"/>
             <key code="45" action="9"/>
-            <key code="46" output="M"/>
+            <key code="46" action="UpperMEntry"/>
             <key code="47" output="&#x003E;"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
@@ -271,7 +271,7 @@
             <key code="2" output="D"/>
             <key code="3" output="F"/>
             <key code="4" output="H"/>
-            <key code="5" output="G"/>
+            <key code="5" action="UpperGEntry"/>
             <key code="6" output="Z"/>
             <key code="7" output="X"/>
             <key code="8" output="C"/>
@@ -312,7 +312,7 @@
             <key code="43" output=","/>
             <key code="44" output="/"/>
             <key code="45" action="9"/>
-            <key code="46" output="M"/>
+            <key code="46" action="UpperMEntry"/>
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
@@ -1172,6 +1172,34 @@
         <action id="9">
             <when state="none" output="N"/>
             <when state="s5" output="Ñ"/>
+        </action>
+        <action id="LowerGEntry">
+            <when state="none" output="g"/>
+            <when state="Tone1Entry" output="ḡ"/>
+            <when state="Tone2Entry" output="ǵ"/>
+            <when state="Tone4Entry" output="g̀"/>
+            <when state="Tone5Entry" output="ǵ"/>
+        </action>
+        <action id="UpperGEntry">
+            <when state="none" output="G"/>
+            <when state="Tone1Entry" output="Ḡ"/>
+            <when state="Tone2Entry" output="Ǵ"/>
+            <when state="Tone4Entry" output="G̀"/>
+            <when state="Tone5Entry" output="Ǵ"/>
+        </action>
+        <action id="LowerMEntry">
+            <when state="none" output="m"/>
+            <when state="Tone1Entry" output="m̄"/>
+            <when state="Tone2Entry" output="ḿ"/>
+            <when state="Tone4Entry" output="m̀"/>
+            <when state="Tone5Entry" output="ḿ"/>
+        </action>
+        <action id="UpperMEntry">
+            <when state="none" output="M"/>
+            <when state="Tone1Entry" output="M̄"/>
+            <when state="Tone2Entry" output="Ḿ"/>
+            <when state="Tone4Entry" output="M̀"/>
+            <when state="Tone5Entry" output="Ḿ"/>
         </action>
         <action id="Tone1Action">
             <when state="none" next="Tone1Entry"/>
