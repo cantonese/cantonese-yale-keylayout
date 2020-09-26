@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<keyboard group="126" id="-12360" name="U.S." maxout="1">
+<keyboard group="126" id="-852" name="Yale" maxout="1">
     <layouts>
         <layout first="0" last="17" mapSet="16c" modifiers="f4"/>
         <layout first="18" last="18" mapSet="994" modifiers="f4"/>
@@ -396,12 +396,12 @@
             <key code="15" output="®"/>
             <key code="16" output="¥"/>
             <key code="17" output="†"/>
-            <key code="18" output="¡"/>
-            <key code="19" output="™"/>
+            <key code="18" action="Tone1Action"/>
+            <key code="19" action="Tone2Action"/>
             <key code="20" output="£"/>
-            <key code="21" output="¢"/>
+            <key code="21" action="Tone4Action"/>
             <key code="22" output="§"/>
-            <key code="23" output="∞"/>
+            <key code="23" action="Tone5Action"/>
             <key code="24" output="≠"/>
             <key code="25" output="ª"/>
             <key code="26" output="¶"/>
@@ -1028,6 +1028,10 @@
         </action>
         <action id="10">
             <when state="none" output="O"/>
+            <when state="Tone1Entry" output="Ō"/>
+            <when state="Tone2Entry" output="Ó"/>
+            <when state="Tone4Entry" output="Ò"/>
+            <when state="Tone5Entry" output="Ó"/>
             <when state="s1" output="Ó"/>
             <when state="s2" output="Ò"/>
             <when state="s3" output="Ô"/>
@@ -1036,6 +1040,10 @@
         </action>
         <action id="11">
             <when state="none" output="U"/>
+            <when state="Tone1Entry" output="Ū"/>
+            <when state="Tone2Entry" output="Ú"/>
+            <when state="Tone4Entry" output="Ù"/>
+            <when state="Tone5Entry" output="Ú"/>
             <when state="s1" output="Ú"/>
             <when state="s2" output="Ù"/>
             <when state="s3" output="Û"/>
@@ -1047,6 +1055,10 @@
         </action>
         <action id="13">
             <when state="none" output="a"/>
+            <when state="Tone1Entry" output="ā"/>
+            <when state="Tone2Entry" output="á"/>
+            <when state="Tone4Entry" output="à"/>
+            <when state="Tone5Entry" output="á"/>
             <when state="s1" output="á"/>
             <when state="s2" output="à"/>
             <when state="s3" output="â"/>
@@ -1055,6 +1067,10 @@
         </action>
         <action id="14">
             <when state="none" output="e"/>
+            <when state="Tone1Entry" output="ē"/>
+            <when state="Tone2Entry" output="é"/>
+            <when state="Tone4Entry" output="è"/>
+            <when state="Tone5Entry" output="é"/>
             <when state="s1" output="é"/>
             <when state="s2" output="è"/>
             <when state="s3" output="ê"/>
@@ -1062,6 +1078,10 @@
         </action>
         <action id="15">
             <when state="none" output="i"/>
+            <when state="Tone1Entry" output="ī"/>
+            <when state="Tone2Entry" output="í"/>
+            <when state="Tone4Entry" output="ì"/>
+            <when state="Tone5Entry" output="í"/>
             <when state="s1" output="í"/>
             <when state="s2" output="ì"/>
             <when state="s3" output="î"/>
@@ -1073,6 +1093,10 @@
         </action>
         <action id="17">
             <when state="none" output="o"/>
+            <when state="Tone1Entry" output="ō"/>
+            <when state="Tone2Entry" output="ó"/>
+            <when state="Tone4Entry" output="ò"/>
+            <when state="Tone5Entry" output="ó"/>
             <when state="s1" output="ó"/>
             <when state="s2" output="ò"/>
             <when state="s3" output="ô"/>
@@ -1081,6 +1105,10 @@
         </action>
         <action id="18">
             <when state="none" output="u"/>
+            <when state="Tone1Entry" output="ū"/>
+            <when state="Tone2Entry" output="ú"/>
+            <when state="Tone4Entry" output="ù"/>
+            <when state="Tone5Entry" output="ú"/>
             <when state="s1" output="ú"/>
             <when state="s2" output="ù"/>
             <when state="s3" output="û"/>
@@ -1109,6 +1137,10 @@
         </action>
         <action id="6">
             <when state="none" output="A"/>
+            <when state="Tone1Entry" output="Ā"/>
+            <when state="Tone2Entry" output="Á"/>
+            <when state="Tone4Entry" output="À"/>
+            <when state="Tone5Entry" output="Á"/>
             <when state="s1" output="Á"/>
             <when state="s2" output="À"/>
             <when state="s3" output="Â"/>
@@ -1117,6 +1149,10 @@
         </action>
         <action id="7">
             <when state="none" output="E"/>
+            <when state="Tone1Entry" output="Ē"/>
+            <when state="Tone2Entry" output="É"/>
+            <when state="Tone4Entry" output="È"/>
+            <when state="Tone5Entry" output="É"/>
             <when state="s1" output="É"/>
             <when state="s2" output="È"/>
             <when state="s3" output="Ê"/>
@@ -1124,6 +1160,10 @@
         </action>
         <action id="8">
             <when state="none" output="I"/>
+            <when state="Tone1Entry" output="Ī"/>
+            <when state="Tone2Entry" output="Í"/>
+            <when state="Tone4Entry" output="Ì"/>
+            <when state="Tone5Entry" output="Í"/>
             <when state="s1" output="Í"/>
             <when state="s2" output="Ì"/>
             <when state="s3" output="Î"/>
@@ -1133,8 +1173,24 @@
             <when state="none" output="N"/>
             <when state="s5" output="Ñ"/>
         </action>
+        <action id="Tone1Action">
+            <when state="none" next="Tone1Entry"/>
+        </action>
+        <action id="Tone2Action">
+            <when state="none" next="Tone2Entry"/>
+        </action>
+        <action id="Tone4Action">
+            <when state="none" next="Tone4Entry"/>
+        </action>
+        <action id="Tone5Action">
+            <when state="none" next="Tone5Entry"/>
+        </action>
     </actions>
     <terminators>
+        <when state="Tone1Entry" output="¯"/>
+        <when state="Tone2Entry" output="´"/>
+        <when state="Tone4Entry" output="`"/>
+        <when state="Tone5Entry" output="´"/>
         <when state="s1" output="´"/>
         <when state="s2" output="`"/>
         <when state="s3" output="ˆ"/>
